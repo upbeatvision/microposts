@@ -1,4 +1,5 @@
 class AddLocationUser < ActiveRecord::Migration
-  def change
-  end
+    def change
+       add_column :users, :location, :string
+    end
 end

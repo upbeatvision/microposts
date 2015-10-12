@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    if @user.update(message_params)
+    if @user.update(user_params)
       # 保存に成功した場合はトップページへリダイレクト
       redirect_to root_path , notice: 'メッセージを編集しました'
     else
@@ -35,11 +35,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
+    params.require(:user).permit(:name, :email, :location, :password,
                                  :password_confirmation)
   end
   
-  def set_message
-    @message = User.find(params[:id])
+  def set_user
+    @user = User.find(params[:id])
   end
 end
