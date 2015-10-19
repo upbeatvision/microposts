@@ -4,6 +4,11 @@
   <aside class="col-md-4">
     <section class="user_info">
       <%= gravatar_for @user %>
+      <% if @user.avatar? %>
+　　    <%= image_tag @user.avatar.thumb.url %>
+　    <% else %>
+　    　<%= image_tag 'noimage.gif' %>
+    　<% end %>
       <h1><%= @user.name %></h1>
          <span>地域：<%= @user.location %></span>
          <span><%= link_to "Followings", user_followers_path(@user) %></span>
