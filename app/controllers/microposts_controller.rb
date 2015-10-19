@@ -11,6 +11,7 @@ class MicropostsController < ApplicationController
       flash[:success] = "Micropost created!"
       redirect_to root_url
     else
+      #画像が投稿されていない可能性がある。
       render 'static_pages/home'
     end
   end
