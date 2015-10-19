@@ -5,15 +5,13 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
+      </h1>
        <ul>
          <li>ユーザー名：<%= @user.name %></li>
-         <li>地域：<%= @user.location %></li></li>
+         <li>地域：<%= @user.location %></li>
+         <li><%= link_to "Followings", user_followers_path(@user) %></li>
+         <li><%= link_to "Followers", user_followings_path(@user) %></li>    
        </ul>
-      </h1>
-      <h3>
-        <div><%= link_to "Followings", user_followers_path(@user) %></div>
-        <div><%= link_to "Followers", user_followings_path(@user) %></div>    
-      </h3>
     </section>
   </aside>
   <div class="col-md-8">
