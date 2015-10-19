@@ -6,7 +6,8 @@
         <%= @user.name %>
       </h1>
       <h3>
-        <%= link_to "Edit", edit_user_path %>
+        <div><%= link_to "Followings", user_followers_path(@user) %></div>
+        <div><%= link_to "Followers", user_followings_path(@user) %></div>    
       </h3>
     </section>
   </aside>
