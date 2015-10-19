@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   before_action :set_user, only: [:edit, :update, :destroy]
 
-  def show # 追加
+  def show 
    @user = User.find(params[:id])
    @microposts = @user.microposts
   end
@@ -31,6 +32,16 @@ class UsersController < ApplicationController
       # 保存に失敗した場合は編集画面へ戻す
       render 'edit'
     end
+  end
+  
+  def followers
+    @user = User.find(params[:user_id])
+    @followers = @user.follower_users
+  end
+
+  def followings
+    @user = User.find(params[:user_id])
+    @followings = @user.following_users
   end
   
   private
