@@ -6,13 +6,13 @@
       <%= render 'shared/error_messages', object: f.object %> <!-- ここを追加 -->
       
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: 'form-control'  %>
 
       <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, class: 'form-control'  %>
       
       <%= f.label :location %>
-      <%= f.text_field :location %>
+      <%= f.text_field :location, class: 'form-control'  %>
 
       <%= f.submit "Update my account", class: "btn btn-large btn-primary" %>
     <% end %>

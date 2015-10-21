@@ -6,8 +6,8 @@
       <%= gravatar_for @user %>
       <h1><%= @user.name %></h1>
          <span>地域：<%= @user.location %></span>
-         <span><%= link_to "Followings", user_followers_path(@user) %></span>
-         <span><%= link_to "Followers", user_followings_path(@user) %></span>    
+         <span><%= link_to "Followers", user_followers_path(@user) %></span>
+         <span><%= link_to "Followings", user_followings_path(@user) %></span>    
     </section>
   </aside>
   <div class="col-md-8">
